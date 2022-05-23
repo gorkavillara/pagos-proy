@@ -16,6 +16,7 @@ export default function Redir() {
         }
         const cPayment = router.query.amount && getSignedPayment(Number(router.query.amount), "https://gorkavillar.com", "https://gorkavillar.com", "https://gorkavillar.com", getCode(), router.query.bizum ? true : false);
         return setCodedPayment(cPayment);
+        
     }, [router.query]);
 
     useEffect(() => {
